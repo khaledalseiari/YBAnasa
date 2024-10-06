@@ -58,3 +58,8 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+iframe {
+    width: 80vw;  /* Full viewport width */
+    height: 80vh; /* Full viewport height */
+    border: none;  /* No border around the iframe */
+}
