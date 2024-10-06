@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YBA Methane Emissions & Climate Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for graphs -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> <!-- Leaflet.js for interactive maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+</head>
+<body>
+
+    <header>
+        <h1>Methane & Carbon Emissions and Climate Impact</h1>
+        <nav>
+            <ul>
+                <li><a href="#oco2-data">OCO-2 CO₂ Data</a></li>
+                <li><a href="#micasa-data">MiCASA Carbon Flux</a></li>
+                <li><a href="#wetland-methane">Wetland Methane Emissions</a></li>
+                <li><a href="#interactive-map">Interactive Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="oco2-data">
+        <h2>OCO-2 CO₂ Concentrations</h2>
+        <p>Data from NASA's Orbiting Carbon Observatory-2 showing atmospheric carbon dioxide (CO₂) concentrations from 2015-2022.</p>
+        <canvas id="oco2Chart" width="400" height="200"></canvas>
+    </section>
+
+    <section>
+        <h2>The Impact of Carbon Dioxide (CO₂) on Climate</h2>
+        <p>
+            Carbon dioxide (CO₂) is one of the most significant greenhouse gases responsible for climate change. It traps heat in the Earth's atmosphere, leading to a rise in global temperatures. This phenomenon, known as the greenhouse effect, causes glaciers to melt, sea levels to rise, and weather patterns to become more extreme. While CO₂ is naturally produced by processes like respiration and volcanic eruptions, human activities such as burning fossil fuels for energy have dramatically increased its concentration in the atmosphere. As CO₂ levels rise, the Earth's ability to regulate its climate becomes disrupted, contributing to long-term environmental changes.
+        </p>
+    </section>
+
+    <section id="micasa-data">
+        <h2>MiCASA Carbon Flux</h2>
+        <p>Daily and monthly carbon flux data (NPP, Rh, FIRE, FUEL) derived from the MiCASA model.</p>
+        <canvas id="micasaChart" width="400" height="200"></canvas>
+    </section>
+
+    <section>
+        <h2>Methane (CH₄): A Potent Greenhouse Gas</h2>
+        <p>
+            Methane (CH₄) is another powerful greenhouse gas, though less prevalent than CO₂, it is much more effective at trapping heat—about 25 times more potent over a 100-year period. Methane emissions come from both natural sources, like wetlands, and human activities, such as agriculture, landfills, and fossil fuel extraction. Despite its shorter atmospheric lifespan compared to CO₂, methane plays a critical role in the near-term warming of the planet. Reducing methane emissions is crucial in mitigating the effects of climate change in the coming decades.
+        </p>
+    </section>
+
+    <section id="wetland-methane">
+        <h2>Wetland Methane Emissions</h2>
+        <p>Global estimates of methane emissions from vegetated wetlands, using the LPJ-EOSIM model (1990-present).</p>
+        <canvas id="wetlandChart" width="400" height="200"></canvas>
+    </section>
+
+    <section>
+        <h2>The Urgency of Addressing Greenhouse Gas Emissions</h2>
+        <p>
+            Both CO₂ and CH₄ emissions contribute to the rapid changes we are observing in the Earth's climate system. From more frequent heatwaves and wildfires to severe droughts and storms, the impact of these gases is already being felt globally. Addressing greenhouse gas emissions is essential to slowing down the progression of climate change. By reducing our reliance on fossil fuels and improving land-use practices, we can limit the emissions of these gases and work toward a more sustainable future.
+        </p>
+    </section>
+
+    <section id="interactive-map">
+        <h2>Interactive Map</h2>
+        <div id="map" style="height: 400px;"></div>
+        
+        <p>For more information, visit
+            <a
+                href="https://earth.gov/ghgcenter/data-catalog/oco2geos-co2-daygrid-v10r" target="_blank">this resource</a>.
+        </p>
+    </section>
+    <footer>
+             <p>Sources: NASA's Orbiting Carbon Observatory-2 (OCO-2), MiCASA model, LPJ-EOSIM model, and other relevant datasets.</p>
+        </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
