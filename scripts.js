@@ -4,14 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const oco2Chart = new Chart(oco2Ctx, {
         type: 'line',
         data: {
-            labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'], // X-axis labels (years)
+            labels: ['1960', '1965', '1970', '1975', '1980', '1985', '1990', '1995', '2000', '2005', '2010', '2015', '2020', '2025'], // X-axis labels (years)
             datasets: [{
                 label: 'CO₂ Concentration (ppm)',
-                data: [399.8, 402.1, 404.5, 407.2, 409.5, 411.8, 414.0, 416.5], // Sample data for CO₂ levels (ppm)
+                data: [316.9, 320.0, 325.7, 330.5, 338.9, 346.1, 354.3, 360.0, 370.6, 379.8, 390.8, 400.8, 415.0, 416.5, 426], // CO₂ levels from 1960 to projected 2025
                 borderColor: 'rgba(255, 99, 132, 1)',
                 fill: false
             }]
         },
+        
         options: {
             scales: {
                 y: {
@@ -89,14 +90,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const wetlandChart = new Chart(wetlandCtx, {
         type: 'line',
         data: {
-            labels: ['1990', '1995', '2000', '2005', '2010', '2015', '2020'], // X-axis labels (years)
+            labels: ['1985', '1987', '1990', '1992', '1995', '1997', '2000', '2002', '2005', '2007', '2010', '2012', '2015', '2017', '2020'], // X-axis labels (years)
             datasets: [{
-                label: 'Methane Emissions (Tg CH₄)',
-                data: [180, 185, 190, 195, 200, 205, 210], // Sample data for methane emissions in teragrams (Tg)
+                label: 'Methane Emissions (CH₄ Mole Fraction in parts per billion)',
+                data: [1640, 1660, 1700, 1720, 1750, 1770, 1790, 1800, 1820, 1830, 1850, 1865, 1880, 1890, 1900], // Estimated data points for methane emissions (ppb)
                 borderColor: 'rgba(75, 192, 192, 1)',
                 fill: false
             }]
         },
+        
+        
         options: {
             scales: {
                 y: {
@@ -151,6 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             info: "Rapidly urbanizing city contributing to greenhouse gases."
         }
     ];
+    
 
     locations.forEach(location => {
         const marker = L.marker(location.coords).addTo(map);
