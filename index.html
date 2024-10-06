@@ -64,22 +64,43 @@
 
     <section id="interactive-map">
         <h2>Interactive Map</h2>
-        <div id="map" style="height: 400px;"></div>
-        
-        <p>For more information, visit
-            <a
-                href="https://earth.gov/ghgcenter/data-catalog/oco2geos-co2-daygrid-v10r" target="_blank">this resource</a>.
-        </p>
+        <style>
+            .iframe-container {
+                display: flex;
+                justify-content: center;  
+                align-items: center;      /* Centers vertically */
+                height: 80vh;            
+                overflow: hidden;         
+            }
+            
+            iframe {
+                width: 80%;              
+                height: 100%;             
+                position: relative;
+                top: -65px;              
+                border: none;            
+            }
+            
+            
+            
+            
+              </style>
+              
+              <div class="iframe-container">
+                <iframe src="https://explore.openaq.org/#1.34/21.1/37.7" frameborder="0"></iframe>
+            </div>
     </section>
+    
     <footer>
              <p>Sources: NASA's Orbiting Carbon Observatory-2 (OCO-2), MiCASA model, LPJ-EOSIM model, and other relevant datasets.</p>
         </footer>
 
     <script src="scripts.js"></script>
     <script
-        chatbot_id="6702321beef26f4d210ae537"
-        src="https://app.thinkstack.ai/bot/thinkstackai-loader.min.js">
-    </script>
+    chatbot_id="6702321beef26f4d210ae537"
+    src="https://app.thinkstack.ai/bot/thinkstackai-loader.min.js">
+</script>
+
 </body>
 </html>
 
