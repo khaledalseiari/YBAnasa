@@ -62,4 +62,6 @@ iframe {
     width: 80vw;  /* Full viewport width */
     height: 80vh; /* Full viewport height */
     border: none;  /* No border around the iframe */
+background-color: white;
+    
 }
