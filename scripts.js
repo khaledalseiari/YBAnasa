@@ -15,7 +15,28 @@ document.addEventListener('DOMContentLoaded', () => {
         options: {
             scales: {
                 y: {
-                    beginAtZero: false
+                    beginAtZero: false,
+                    ticks: {
+                        color: 'white' // Change y-axis ticks color to white
+                    },
+                    grid: {
+                        color: 'white' // Change y-axis grid lines color to white
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: 'white' // Change x-axis ticks color to white
+                    },
+                    grid: {
+                        color: 'white' // Change x-axis grid lines color to white
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        color: 'white' // Change legend text color to white
+                    }
                 }
             }
         }
@@ -36,7 +57,28 @@ document.addEventListener('DOMContentLoaded', () => {
         options: {
             scales: {
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    ticks: {
+                        color: 'white' // Change y-axis ticks color to white
+                    },
+                    grid: {
+                        color: 'white' // Change y-axis grid lines color to white
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: 'white' // Change x-axis ticks color to white
+                    },
+                    grid: {
+                        color: 'white' // Change x-axis grid lines color to white
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        color: 'white' // Change legend text color to white
+                    }
                 }
             }
         }
@@ -58,13 +100,33 @@ document.addEventListener('DOMContentLoaded', () => {
         options: {
             scales: {
                 y: {
-                    beginAtZero: false
+                    beginAtZero: false,
+                    ticks: {
+                        color: 'white' // Change y-axis ticks color to white
+                    },
+                    grid: {
+                        color: 'white' // Change y-axis grid lines color to white
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: 'white' // Change x-axis ticks color to white
+                    },
+                    grid: {
+                        color: 'white' // Change x-axis grid lines color to white
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        color: 'white' // Change legend text color to white
+                    }
                 }
             }
         }
     });
 
-   
     const map = L.map('map').setView([20, 0], 2);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -94,6 +156,4 @@ document.addEventListener('DOMContentLoaded', () => {
         const marker = L.marker(location.coords).addTo(map);
         marker.bindPopup(`<strong>${location.name}</strong><br>${location.info}`);
     });
-
-
 });
