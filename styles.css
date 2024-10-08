@@ -3,7 +3,7 @@ body {
     background-color: #07061f;
     color: white;
     margin: 0;
-    padding: 0;
+ padding: 0;
 }
 
 section {
@@ -41,27 +41,43 @@ section {
     margin: 20px 0;
 }
 
-#map {
-    height: 400px;
-    width: 100%;
-    margin-top: 20px;
-}
 
 canvas {
     max-width: 600px;
     margin: 20px auto;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+#map-container {
+    display: flex;  /* Flexbox layout for the map and sidebar */
+    height: 100vh; /* Full height for container */
 }
-iframe {
-    width: 80vw;  /* Full viewport width */
-    height: 80vh; /* Full viewport height */
-    border: none;  /* No border around the iframe */
-background-color: white;
+#map {
+    border-top-left-radius: 15px; /* Rounded top right corner */
+    border-bottom-left-radius: 15px; /* Rounded bottom right corner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     
+    width: 75%; /* Map takes 75% of the width */
+    height: 75%; /* Full height of the container */
+}
+#sidebar {
+  background-color: #2c23c7;
+    color: whitesmoke;
+    display: none; /* Hide sidebar initially */
+    overflow-y: auto; /* Scroll if content overflows */
+    border-top-right-radius: 15px; /* Rounded top right corner */
+    border-bottom-right-radius: 15px; /* Rounded bottom right corner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 25%; 
+    height: 75%;
+   
+      
+}
+#sidebar h2 {
+    margin-left: 20px; /* Indent the title */
+}
+
+#countryCo2ChartMap {
+    width: 95%; /* Full width of sidebar */
+    height: 200%; /* Fixed height for the chart */
+    margin-left: 5px; 
 }
