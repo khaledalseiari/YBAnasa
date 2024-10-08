@@ -61,46 +61,25 @@
             Both CO₂ and CH₄ emissions contribute to the rapid changes we are observing in the Earth's climate system. From more frequent heatwaves and wildfires to severe droughts and storms, the impact of these gases is already being felt globally. Addressing greenhouse gas emissions is essential to slowing down the progression of climate change. By reducing our reliance on fossil fuels and improving land-use practices, we can limit the emissions of these gases and work toward a more sustainable future.
         </p>
     </section>
-
-    <section id="interactive-map">
-        <h2>Interactive Map</h2>
-        <style>
-            .iframe-container {
-                display: flex;
-                justify-content: center;  
-                align-items: center;      /* Centers vertically */
-                height: 80vh;            
-                overflow: hidden;         
-            }
-            
-            iframe {
-                width: 80%;              
-                height: 100%;             
-                position: relative;
-                top: -85px;              
-                border: none;            
-            }
-            
-            
-            
-            
-              </style>
-              
-              <div class="iframe-container">
-                <iframe src="https://explore.openaq.org/" frameborder="0"></iframe>
-            </div>
+    
+    <section id="country-co2-data">
+        <h2>Select a Country to View CO₂ Emissions per Capita</h2>
+        <label for="countrySelect">Country/Region:</label>
+        <select id="countrySelect">
+            <!-- Options will be populated dynamically -->
+        </select>
+        <canvas id="countryCo2Chart" width="600" height="300"></canvas>
     </section>
     
     <footer>
-             <p>Sources: NASA's Orbiting Carbon Observatory-2 (OCO-2), MiCASA model, LPJ-EOSIM model, NOAA.gov, Openaq, and other relevant sources.</p>
-        </footer>
+        <p>Sources: NASA's Orbiting Carbon Observatory-2 (OCO-2), MiCASA model, LPJ-EOSIM model, NOAA.gov, Openaq, and other relevant sources.</p>
+    </footer>
 
     <script src="scripts.js"></script>
     <script
     chatbot_id="6702321beef26f4d210ae537"
     src="https://app.thinkstack.ai/bot/thinkstackai-loader.min.js">
-</script>
+    </script>
 
 </body>
 </html>
-
