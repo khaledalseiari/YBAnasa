@@ -69,7 +69,17 @@
             <!-- Options will be populated dynamically -->
         </select>
         <canvas id="countryCo2Chart" width="600" height="300"></canvas>
+        <h2>Or use map to View CO₂ Emissions per Capita</h2>    
+        <div id="map-container"> <!-- Flex container for map and sidebar -->
+            <div id="map"></div>
+            <div id="sidebar">
+                <h2>CO₂ Emissions Chart</h2>
+                <canvas id="countryCo2ChartMap" width="400" height="200"></canvas>
+            </div>
+        </div>
     </section>
+    
+    
     
     <footer>
         <p>Sources: NASA's Orbiting Carbon Observatory-2 (OCO-2), MiCASA model, LPJ-EOSIM model, NOAA.gov, Openaq, and other relevant sources.</p>
